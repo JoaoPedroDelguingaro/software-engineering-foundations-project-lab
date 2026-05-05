@@ -2,7 +2,7 @@
 
 ---
 
-##  1. Introdução
+## 1. Introdução
 
 ### 1.1 Objetivo
 Este documento tem como objetivo descrever de forma clara e organizada os requisitos do sistema educacional baseado em gamificação. Ele serve como base para o desenvolvimento, validação e manutenção do sistema, alinhando as expectativas entre desenvolvedores, usuários e demais stakeholders.
@@ -28,7 +28,7 @@ Fora do escopo do sistema estão funcionalidades como substituição do ensino f
 
 ---
 
-##  2. Product Vision
+## 2. Product Vision
 
 ### 2.1 Problema
 Cada vez torna-se mais comum a evasão escolar e o alto nível de desinteresse nas escolas, isso se deve, em partes, a forma de lecionar antiquada que ainda vem sendo muito utilizada adolescentes sentados em uma cadeira durante horas ao longo de uma semana realizando atividades cansativas que geralmente não gera bons resultados.
@@ -54,7 +54,7 @@ Nosso sistema tem como principal diferencial a oferta de diversas matérias da g
 
 ---
 
-##  3. Visão Geral do Sistema
+## 3. Visão Geral do Sistema
 
 ### 3.1 Descrição Geral
 O projeto consiste no desenvolvimento de um sistema educacional baseado em gamificação dos estudos, com o objetivo de tornar o aprendizado mais dinâmico, interativo e motivador para alunos do ensino fundamental.
@@ -83,7 +83,7 @@ No geral, o projeto busca unir tecnologia e educação de forma acessível, torn
 
 ---
 
-##  4. Requisitos Funcionais
+## 4. Requisitos Funcionais
 
 ### RF01 - Cadastro de aluno
 **Descrição:**  
@@ -265,7 +265,7 @@ O sistema deve disponibilizar trilhas de aprendizagem das matérias do ensino fu
 
 ---
 
-##  5. Requisitos Não Funcionais
+## 5. Requisitos Não Funcionais
 
 ### 5.1 Usabilidade
 - O sistema deve possuir interface intuitiva e de fácil navegação, mesmo para novos usuários.
@@ -287,9 +287,9 @@ O sistema deve disponibilizar trilhas de aprendizagem das matérias do ensino fu
 - O sistema deve implementar atualizações de pontuação, rankings e conquistas devem ocorrer em tempo quase real.
   
 ### 5.4 Espaço
-- Deve otimizar o uso de memória durante a execução.
-- Deve permitir acesso sem necessidade de instalação (via navegador).
-- Deve minimizar o uso de dados móveis (internet).
+- O sistema deve otimizar o uso de memória durante a execução.
+- O sistema deve permitir acesso sem necessidade de instalação (via navegador).
+- O sistema deve minimizar o uso de dados móveis (internet).
 - O sistema deve ocupar pouco espaço de armazenamento nos dispositivos.
 
 ### 5.5 Confiabilidade
@@ -307,7 +307,7 @@ O sistema deve disponibilizar trilhas de aprendizagem das matérias do ensino fu
 
 ---
 
-##  6. Requisitos Organizacionais
+## 6. Requisitos Organizacionais
 
 ### 6.1 Ambientais
 - Infraestrutura tecnológica adequada (internet estável, computadores, tablets) 
