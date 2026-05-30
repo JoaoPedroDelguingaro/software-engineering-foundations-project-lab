@@ -385,7 +385,7 @@ O sistema deve disponibilizar trilhas de aprendizagem das matérias do ensino fu
 ##  8. Arquitetura do Sistema
 
 ### 8.1 Visão Geral
-Descreva a arquitetura (ex: monolito, microserviços).
+A arquitetura utilizada será a Cliente-Servidor, utilizando API RESTful.
 
 ### 8.2 Componentes
 - Frontend  
