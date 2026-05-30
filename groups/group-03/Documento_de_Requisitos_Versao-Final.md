@@ -399,10 +399,10 @@ A arquitetura utilizada será a Cliente-Servidor, utilizando API RESTful.
 - Banco de dados  
 
 ### 8.4 Decisões Arquiteturais
-Explique como a arquitetura atende aos requisitos não funcionais:
-- Desempenho  
-- Segurança  
-- Escalabilidade  
+A arquitetura Cliente-Servidor atende aos requisitos não funcionais:
+- Desempenho: Permite que os efeitos visuais e interface sejam aplicados no aparelho do usuário, enquanto o hardware do servidor se ocupa com os cálculos e modificações de dados.
+- Segurança: Permite o isolamento de dados, pois o cliente nunca conversa diretamente com o servidor, apenas a API pode acessar ambos. O modelo RESTful permite maior segurança por exigir tokens de autenticação, que servem como "senhas" para interagir com os dados armazenados.
+- Escalabilidade: Esta arquitetura permite escalabilidade vertical e horizontal, separando o gargalo visual(front-end) do gargalo de processamento de dados(back-end). A API RESTful permite que o aplicativo possa ser lançado para mobile e futuramente desenvolvido em web, com apenas a API sendo conectada às novas versões.
 
 ---
 
