@@ -379,5 +379,3 @@ O sistema deve disponibilizar trilhas de aprendizagem das matérias do ensino fu
 - Histórico financeiro: O sistema deve manter histórico de movimentações financeiras para rastreabilidade e conferência de informações.
 
 - Conformidade fiscal: O sistema deve garantir conformidade com normas contábeis e fiscais aplicáveis à instituição.
-
----
