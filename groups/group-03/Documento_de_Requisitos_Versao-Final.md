@@ -339,282 +339,43 @@ O sistema deve disponibilizar trilhas de aprendizagem das matérias do ensino fu
 - Acessibilidade (LBI): O software deve seguir a Lei Brasileira de Inclusão (Lei 13.146) e as diretrizes do WCAG 2.1, garantindo que alunos com deficiência visual ou motora possam utilizar o app de forma equivalente aos demais.
 
 ### 7.2 Éticos
-- Não discriminação  
-- Transparência
-- Inclusão educacional 
+
+- Acessibilidade e inclusão: O sistema deve assegurar que todos os usuários possam utilizar a plataforma em condições equivalentes de acesso e usabilidade.
+  
+- Transparência: O sistema deve assegurar clareza na coleta, armazenamento e utilização de dados acadêmicos e pessoais dos usuários.
+
+- Inclusão educacional: O sistema deve promover acessibilidade e usabilidade compatíveis com diferentes perfis de estudantes, incluindo usuários com deficiência.
+
+---
 
 ### 7.3 Legais
-- Leis aplicáveis
-- Direitos autorais  
+
+- LGPD (Lei Geral de Proteção de Dados): O sistema deve estar em conformidade com a Lei nº 13.709/2018, garantindo privacidade, segurança e tratamento adequado das informações pessoais.
+
+- Direitos autorais: O sistema deve respeitar a legislação de direitos autorais aplicada a conteúdos pedagógicos, documentos e materiais disponibilizados na plataforma.
+
+- Normas educacionais: O sistema deve atender às regulamentações definidas pelos órgãos competentes, como MEC e BNCC.
+
+---
 
 ### 7.4 Segurança Externa
-- Proteção contra ataques  
-- Auditorias
+
+- Proteção contra ataques: O sistema deve implementar mecanismos de segurança contra ataques cibernéticos, incluindo autenticação segura e controle de acesso.
+
+- Auditorias: O sistema deve manter registros de auditoria para rastreamento das operações realizadas por usuários e administradores.
+
+- Criptografia: O sistema deve utilizar protocolos de criptografia para proteção de dados sensíveis durante armazenamento e transmissão.
+
+- Backup e recuperação: O sistema deve possuir políticas de backup e recuperação de dados para garantir continuidade operacional em casos de falha.
+
+---
 
 ### 7.5 Contábeis
-- Registro de transações  
-- Relatórios 
 
----
+- Registro de transações: O sistema deve registrar transações financeiras e operacionais de forma íntegra, consistente e auditável.
 
-##  8. Arquitetura do Sistema
+- Relatórios: O sistema deve gerar relatórios contábeis e financeiros para apoio à gestão administrativa e prestação de contas.
 
-### 8.1 Visão Geral
-Descreva a arquitetura (ex: monolito, microserviços).
+- Histórico financeiro: O sistema deve manter histórico de movimentações financeiras para rastreabilidade e conferência de informações.
 
-### 8.2 Componentes
-- Frontend  
-- Backend  
-- Banco de dados  
-- APIs externas  
-
-### 8.3 Tecnologias
-- Linguagem  
-- Framework  
-- Banco de dados  
-
-### 8.4 Decisões Arquiteturais
-Explique como a arquitetura atende aos requisitos não funcionais:
-- Desempenho  
-- Segurança  
-- Escalabilidade  
-
----
-
-## 9. Casos de Uso e Diagramas UML
-
-Esta seção deve representar visualmente e descritivamente o funcionamento do sistema.
-
-Os diagramas ajudam na:
-- modelagem do sistema;
-- comunicação entre equipe;
-- entendimento da arquitetura e funcionalidades;
-- documentação técnica do projeto.
-
----
-
-# 9.1 Casos de Uso
-
-Os casos de uso representam as interações entre usuários (atores) e o sistema.
-
----
-
-### UC01 - Realizar Login
-
-**Ator:** Usuário  
-
-**Descrição:**  
-Permite que o usuário acesse o sistema utilizando credenciais válidas.
-
----
-
-### Fluxo principal
-1. Usuário acessa a tela de login  
-2. Usuário informa e-mail e senha  
-3. Sistema valida credenciais  
-4. Sistema libera acesso  
-
----
-
-### Fluxo alternativo
-- Credenciais inválidas  
-- Usuário esqueceu senha  
-
----
-
-## Exemplo de Diagrama de Caso de Uso
-
-[Usuário]
-
-    |
-    
-    | ---- (Realizar Login)
-    
-    | ---- (Cadastrar Conta)
-    
-    | ---- (Recuperar Senha) 
-
----
-
-## 9.2 Diagrama de Classes (UML)
-
-O diagrama de classes representa:
-
-- estrutura do sistema;
-- entidades;
-- atributos;
-- métodos;
-- relacionamentos.
-
----
-
-### Exemplo
-
-```text
-+------------------+
-|     Usuário      |
-+------------------+
-| - id             |
-| - nome           |
-| - email          |
-| - senha          |
-+------------------+
-| + login()        |
-| + logout()       |
-+------------------+
-```
-
----
-
-### Exemplo com relacionamento
-
-```text
-+------------------+        +------------------+
-|     Usuário      | 1    * |      Pedido      |
-+------------------+--------+------------------+
-| id               |        | id               |
-| nome             |        | valor            |
-+------------------+        +------------------+
-```
-
----
-
-## 9.3 Diagrama de Atividades (UML)
-
-Representa o fluxo de execução de processos no sistema.
-
----
-
-### Exemplo
-
-```text
-[Início]
-   |
-[Acessar sistema]
-   |
-[Inserir login]
-   |
-{Credenciais válidas?}
-   | Sim
-[Acessa sistema]
-   |
-[Fim]
-
-   | Não
-[Mensagem de erro]
-```
-
----
-
-## 9.4 Diagrama de Sequência (UML)
-
-Representa a comunicação entre objetos ao longo do tempo.
-
----
-
-### Exemplo
-
-```text
-Usuário -> Sistema: realizar login
-Sistema -> Banco: validar usuário
-Banco -> Sistema: usuário válido
-Sistema -> Usuário: acesso liberado
-```
-
----
-
-## 9.5 Diagrama de Componentes
-
-Representa os módulos e componentes principais do sistema.
-
----
-
-### Exemplo
-
-```text
-[Frontend]
-     |
-     v
-[API Backend]
-     |
-     v
-[Banco de Dados]
-```
-
----
-
-## 9.6 Diagrama de Implantação (Deployment)
-
-Representa onde o sistema será executado.
-
----
-
-### Exemplo
-
-```text
-[Usuário]
-     |
-Internet
-     |
-[Servidor Web]
-     |
-[Servidor Banco de Dados]
-```
-
----
-
-## 9.7 Ferramentas Recomendadas
-
-Os diagramas podem ser feitos utilizando:
-
-- Draw.io
-- Lucidchart
-- StarUML
-- Visual Paradigm
-- PlantUML
-- Mermaid
-- Figma
-
----
-
-## 9.8 Observações Importantes
-
-- Os diagramas devem representar o sistema REAL do grupo;
-- Evitem diagramas genéricos;
-- Mantenham consistência entre requisitos e diagramas;
-- Diagramas devem possuir nomes claros;
-- Atualizem os diagramas conforme o sistema evoluir.
-
----
-
-# Regra importante
-
-> “Diagramas não são apenas desenhos: eles representam decisões arquiteturais e técnicas do sistema.”
-
----
-
-##  10. Plano de Testes
-
-### 10.1 Estratégia de Teste
-Como o sistema será testado?
-
-### 10.2 Tipos de Teste
-- Unitário  
-- Integração  
-- Sistema  
-- Aceitação  
-
-### 10.3 Casos de Teste
-
-#### CT01 - Nome
-**Requisito relacionado:** RF01  
-**Descrição:**  
-**Entrada:**  
-**Resultado esperado:**  
-
----
-
-### 10.4 Testes de Requisitos Não Funcionais
-- Performance (tempo de resposta)  
-- Segurança  
-- Usabilidade  
+- Conformidade fiscal: O sistema deve garantir conformidade com normas contábeis e fiscais aplicáveis à instituição.
