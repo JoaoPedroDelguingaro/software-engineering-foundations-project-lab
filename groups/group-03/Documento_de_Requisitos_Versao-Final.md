@@ -537,7 +537,6 @@ Representa a comunicação entre objetos ao longo do tempo.
 
 <img width="1440" height="900" alt="diagrama-sequencia drawio" src="https://github.com/user-attachments/assets/74b1d436-715d-4194-bafe-d4b6bb32e639" />
 
-
 ---
 
 ## 9.5 Diagrama de Componentes
@@ -548,15 +547,7 @@ Representa os módulos e componentes principais do sistema.
 
 ### Exemplo
 
-```text
-[Frontend]
-     |
-     v
-[API Backend]
-     |
-     v
-[Banco de Dados]
-```
+<img width="1384" height="733" alt="diagrama-componentes drawio" src="https://github.com/user-attachments/assets/9e7524ee-b413-49ef-9e8b-aaff4a82c513" />
 
 ---
 
