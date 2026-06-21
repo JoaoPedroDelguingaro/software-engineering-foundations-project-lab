@@ -587,12 +587,6 @@ Os diagramas podem ser feitos utilizando:
 
 ---
 
-# Regra importante
-
-> “Diagramas não são apenas desenhos: eles representam decisões arquiteturais e técnicas do sistema.”
-
----
-
 ## 10. Plano de Testes
 
 ### 10.1 Estratégia de Teste
