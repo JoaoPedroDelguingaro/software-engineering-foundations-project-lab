@@ -758,46 +758,291 @@ Administrador dispara comandos manuais pontuais para forçar a realização de u
 
 ## 9.2 Diagrama de Classes (UML)
 
-O diagrama de classes representa:
-
-- estrutura do sistema;
-- entidades;
-- atributos;
-- métodos;
-- relacionamentos.
-
----
-
-### Exemplo
+## Classe: Usuário
 
 ```text
-+------------------+
-|     Usuário      |
-+------------------+
-| - id             |
-| - nome           |
-| - email          |
-| - senha          |
-+------------------+
-| + login()        |
-| + logout()       |
-+------------------+
++---------------------------+
+|          Usuário          |
++---------------------------+
+| - id                      |
+| - nome                    |
+| - email                   |
+| - senha                   |
+| - tipo                    |
++---------------------------+
+| + login()                 |
+| + logout()                |
+| + cadastrar()             |
+| + recuperarSenha()        |
+| + editarPerfil()          |
++---------------------------+
 ```
 
----
 
-### Exemplo com relacionamento
+
+## Classe: Aluno
 
 ```text
-+------------------+        +------------------+
-|     Usuário      | 1    * |      Pedido      |
-+------------------+--------+------------------+
-| id               |        | id               |
-| nome             |        | valor            |
-+------------------+        +------------------+
++---------------------------+
+|          Aluno            |
++---------------------------+
+| - idade                   |
+| - anoEscolar              |
+| - xp                      |
+| - nivel                   |
+| - streak                  |
++---------------------------+
+| + responderAtividade()    |
+| + ganharXP()              |
+| + visualizarProgresso()   |
+| + entrarGrupo()           |
+| + comprarItem()           |
++---------------------------+
 ```
 
----
+
+
+## Classe: Professor
+
+```text
++---------------------------+
+|        Professor          |
++---------------------------+
+| - instituicao             |
++---------------------------+
+| + criarGrupo()            |
+| + removerAluno()          |
+| + criarMissao()           |
+| + editarMissao()          |
+| + enviarAviso()           |
+| + visualizarRelatorio()   |
++---------------------------+
+```
+
+
+
+## Classe: Administrador
+
+```text
++---------------------------+
+|      Administrador        |
++---------------------------+
+| - permissao               |
++---------------------------+
+| + gerenciarUsuarios()     |
+| + gerenciarConteudos()    |
+| + gerenciarJogos()        |
+| + executarBackup()        |
+| + visualizarLogs()        |
++---------------------------+
+```
+
+
+
+## Classe: Grupo
+
+```text
++---------------------------+
+|          Grupo            |
++---------------------------+
+| - id                      |
+| - nome                    |
+| - codigo                  |
+| - descricao               |
++---------------------------+
+| + adicionarAluno()        |
+| + removerAluno()          |
+| + gerarCodigo()           |
++---------------------------+
+```
+
+
+
+## Classe: Missão
+
+```text
++---------------------------+
+|         Missão            |
++---------------------------+
+| - id                      |
+| - titulo                  |
+| - descricao               |
+| - recompensaXP            |
+| - dataLimite              |
++---------------------------+
+| + publicar()              |
+| + editar()                |
+| + excluir()               |
++---------------------------+
+```
+
+
+
+## Classe: Disciplina
+
+```text
++---------------------------+
+|        Disciplina         |
++---------------------------+
+| - id                      |
+| - nome                    |
++---------------------------+
+| + listarAtividades()      |
++---------------------------+
+```
+
+
+## Classe: Atividade
+
+```text
++---------------------------+
+|        Atividade          |
++---------------------------+
+| - id                      |
+| - titulo                  |
+| - dificuldade             |
+| - pontuacao               |
++---------------------------+
+| + iniciar()               |
+| + finalizar()             |
++---------------------------+
+```
+
+
+
+## Classe: Jogo
+
+```text
++---------------------------+
+|          Jogo             |
++---------------------------+
+| - id                      |
+| - nome                    |
+| - tipo                    |
++---------------------------+
+| + iniciarJogo()           |
+| + registrarResultado()    |
++---------------------------+
+```
+
+
+## Classe: Histórico
+
+```text
++---------------------------+
+|        Histórico          |
++---------------------------+
+| - id                      |
+| - data                    |
+| - pontuacao               |
++---------------------------+
+| + registrar()             |
+| + consultar()             |
++---------------------------+
+```
+
+
+
+## Classe: Conquista
+
+```text
++---------------------------+
+|        Conquista          |
++---------------------------+
+| - id                      |
+| - nome                    |
+| - descricao               |
++---------------------------+
+| + desbloquear()           |
++---------------------------+
+```
+
+
+
+## Classe: Ranking
+
+```text
++---------------------------+
+|         Ranking           |
++---------------------------+
+| - id                      |
+| - posicao                 |
+| - pontuacao               |
++---------------------------+
+| + atualizar()             |
++---------------------------+
+```
+
+
+
+## Classe: Loja
+
+```text
++---------------------------+
+|           Loja            |
++---------------------------+
+| - id                      |
+| - nome                    |
++---------------------------+
+| + listarItens()           |
+| + venderItem()            |
++---------------------------+
+```
+
+
+## Classe: ItemLoja
+
+```text
++---------------------------+
+|        ItemLoja           |
++---------------------------+
+| - id                      |
+| - nome                    |
+| - precoXP                 |
++---------------------------+
+| + aplicarBonus()          |
++---------------------------+
+```
+
+# Teste
+
+classDiagram
+    class Usuario {
+        +id
+        +nome
+        +email
+        +senha
+        +login()
+        +logout()
+    }
+
+    class Aluno {
+        +idade
+        +anoEscolar
+        +xp
+        +nivel
+        +ganharXP()
+    }
+
+    class Professor {
+        +criarGrupo()
+        +criarMissao()
+    }
+
+    class Grupo {
+        +id
+        +nome
+        +codigo
+    }
+
+    Usuario <|-- Aluno
+    Usuario <|-- Professor
+    Usuario <|-- Administrador
+
+    Professor "1" --> "*" Grupo
+    Aluno "*" --> "*" Grupo
+    Grupo "1" --> "*" Missao
+    
 
 ## 9.3 Diagrama de Atividades (UML)
 
